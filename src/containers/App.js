@@ -33,7 +33,8 @@ class App extends Component {
           value={this.props.form.name}
           />
         <button
-          onClick={(e) => this.handleClick(e)}>Klikkaa
+          onClick={(e) => this.handleClick(e)}>
+          Add
         </button>
         <ul>
           {names}
