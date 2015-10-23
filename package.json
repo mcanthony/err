@@ -1,0 +1,64 @@
+{
+  "name": "err",
+  "productName": "Err",
+  "version": "0.0.0",
+  "description": "Electron, react, redux-devtools boilerplate",
+  "license": "MIT",
+  "repository": "https://github.com/tuommii/err.git",
+  "author": {
+    "name": "Miikka",
+    "email": "tuommii@gmail.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "electronVersion": "0.34.0",
+  "scripts": {
+    "test": "mocha --compilers js:babel/register --recursive",
+    "test:watch": "npm run test --watch",
+    "start": "electron .",
+    "scripts": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=$npm_package_electronVersion",
+    "watch": "node_modules/.bin/webpack-dev-server"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "electron",
+    "react",
+    "redux",
+    "redux-devtools",
+    "photon",
+    "boilerplate"
+  ],
+  "dependencies": {
+    "electron-debug": "^0.2.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-redux": "^4.0.0",
+    "redux": "^3.0.3",
+    "redux-thunk": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "baobab-logger": "0.0.6",
+    "chai": "^3.3.0",
+    "css-loader": "^0.19.0",
+    "electron-packager": "^5.0.0",
+    "electron-prebuilt": "^0.34.0",
+    "file-loader": "^0.8.4",
+    "mocha": "^2.3.3",
+    "node-sass": "^3.3.3",
+    "redux-devtools": "^3.0.0-beta-3",
+    "redux-devtools-dock-monitor": "^1.0.0-beta-3",
+    "redux-devtools-log-monitor": "^1.0.0-beta-3",
+    "sass-loader": "^2.0.1",
+    "style-loader": "^0.12.4",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.11.0"
+  }
+}
