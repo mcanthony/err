@@ -13,9 +13,9 @@ class App extends Component {
     e.preventDefault();
     const name = this.refs.nameField.value.trim();
     this.props.addName({ name });
-    this.props.setForm({ name: e.target.value });
   }
   onChange(e) {
+    this.props.setForm({ name: e.target.value });
   }
   render() {
     const names = this.props.names.map((current, index) => {
@@ -33,8 +33,7 @@ class App extends Component {
           value={this.props.form.name}
           />
         <button
-          onClick={(e) => this.handleClick(e)}>
-          Add
+          onClick={(e) => this.handleClick(e)}>Klikkaa
         </button>
         <ul>
           {names}
