@@ -12,7 +12,7 @@
   "engines": {
     "node": ">=4"
   },
-  "electronVersion": "^0.34.0",
+  "electronVersion": "0.34.0",
   "scripts": {
     "test": "mocha --compilers js:babel/register --recursive",
     "test:watch": "npm run test --watch",
