@@ -12,7 +12,7 @@
   "engines": {
     "node": ">=4"
   },
-  "electronVersion": "0.34.0",
+  "electronVersion": "^0.34.0",
   "scripts": {
     "test": "mocha --compilers js:babel/register --recursive",
     "test:watch": "npm run test --watch",
@@ -34,8 +34,8 @@
   ],
   "dependencies": {
     "electron-debug": "^0.2.1",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0",
+    "react": "^0.14.1",
+    "react-dom": "^0.14.1",
     "react-redux": "^4.0.0",
     "redux": "^3.0.3",
     "redux-thunk": "^1.0.0"
