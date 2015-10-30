@@ -11,6 +11,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
+    hot: true,
     contentBase: './public',
     publicPath: 'http://localhost:8080/built'
   },
