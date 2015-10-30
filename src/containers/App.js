@@ -9,14 +9,17 @@ class App extends Component {
   componentDidMount() {
     console.log('APP PROPS: ', this.props);
   }
+
   handleClick(e) {
     e.preventDefault();
     const name = this.refs.nameField.value.trim();
     this.props.addName({ name });
   }
+
   onChange(e) {
     this.props.setForm({ name: e.target.value });
   }
+
   render() {
     const names = this.props.names.map((current, index) => {
       return (
@@ -25,20 +28,33 @@ class App extends Component {
     });
     return (
       <div className="window">
-        <input
-          type="text"
-          name="nameField"
-          ref="nameField"
-          onChange={(e) => this.onChange(e)}
-          value={this.props.form.name}
-          />
-        <button
-          onClick={(e) => this.handleClick(e)}>Klikkaa
-        </button>
-        <ul>
-          {names}
-        </ul>
-        <img src={img} width="100" height="130" />
+        <div className="window-content">
+          <div className="pane-group">
+            <div className="pane">
+
+              <form>
+                <input
+                  type="text"
+                  name="nameField"
+                  ref="nameField"
+                  onChange={(e) => this.onChange(e)}
+                  value={this.props.form.name}
+                  />
+
+                <button
+                  className="btn btn-form btn-default"
+                  onClick={(e) => this.handleClick(e)}>Add
+                </button>
+              </form>
+
+              <ul>
+                {names}
+              </ul>
+              <img src={img} width="100" height="130" />
+
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

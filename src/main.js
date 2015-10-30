@@ -1,6 +1,5 @@
 
-import './css/photon.min.css';
-import './css/styles.css';
+import './styles/styles.scss';
 import React from 'react';
 import { render } from 'react-dom';
 import configureStore from './store/configureStore';

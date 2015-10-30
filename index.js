@@ -19,8 +19,8 @@ function onClosed() {
 
 function createMainWindow() {
   const win = new BrowserWindow({
-    width: 1050,
-    height: 550,
+    width: 1250,
+    height: 650,
     'auto-hide-menu-bar': true
   });
 
